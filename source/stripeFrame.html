@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./scripts/stripeJS.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .StripeElement_old {
+        box-sizing: border-box;
+        height: 40px;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: white;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+        display: block;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        height: 40px;
+        margin-bottom: 0px;
+        padding-right: 12px;
+        padding-left: 12px;
+        border: 0px none transparent;
+        font-size: 16px;
+        box-shadow: none;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .StripeElement {
+        box-sizing: border-box;
+        height: 40px;
+        font-family: Poppins-Medium;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #666666;
+        display: block;
+        width: 100%;
+        background: #ffffff;
+        height: 50px;
+        border-radius: 25px !important;
+        padding: 0 30px 0 68px;
+        padding: 10px 0px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+        display: block;
+        height: 40px;
+        margin-bottom: 0px;
+        padding-right: 6px;
+        padding-left: 12px;
+        box-shadow: none;
+      }
+
+      .ElementsApp .InputElement {
+        color: #666666 !important;
+        FONT-WEIGHT: bold;
+      }
+
+      .ElementsApp .Icon-fill {
+        fill: #666666 !important;
+      }
+
+      .StripeElement--focus {
+        box-shadow: 0 1px 3px 0 #cfd7df;
+      }
+
+      .StripeElement--invalid {
+        border-color: #fa755a;
+      }
+
+      .StripeElement--webkit-autofill {
+        background-color: #fefde5 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+    <!-- now incldue js to send stripe token back to content script... -->
+    <script src="./scripts/stripeFrameJS.js"></script>
+  </body>
+</html>

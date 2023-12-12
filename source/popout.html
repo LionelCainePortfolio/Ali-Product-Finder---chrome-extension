@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Product Finder</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/bootstrap-glyphicons.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/util.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap-select-country.min.css">
+    <style>
+      @font-face {
+        font-family: 'glyphicons-halflings-regular';
+        src: url('./fonts/glyphicons-halflings-regular.woff') format('woff'),
+          /* Modern Browsers */
+          url('./fonts/glyphicons-halflings-regular.ttf') format('truetype');
+        /* Safari, Android, iOS */
+      }
+
+      body {
+        width: 350px;
+        height: 550px;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+        color: black;
+        font-size: 30px;
+        background-color: #5654e3;
+        background-color: #efefef;
+      }
+
+      a:hover {
+        color: #0056b3;
+        text-decoration: double;
+      }
+
+      .name {
+        position: absolute;
+        top: 0px;
+        padding: 10px;
+        font-family: arial;
+        font-size: 15px;
+        left: 0;
+      }
+
+      .rate_us {
+        background: #efefef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: solid 1px #f4f4f4;
+        height: 50px;
+        width: 100%;
+        bottom: 0px;
+        position: fixed;
+        z-index: 999;
+      }
+
+      .rate_us .text {
+        margin-right: 8px;
+        font-weight: 500;
+        color: #adadad;
+        color: #444444;
+        font-size: 14px;
+      }
+
+      .star-ctr {
+        display: inline-block;
+        position: relative;
+      }
+
+      .star-ctr ul {
+        white-space: nowrap;
+        list-style: none outside none;
+        padding-left: 0;
+        overflow: hidden;
+        cursor: pointer;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      .star-fg {
+        top: 0;
+        position: absolute;
+      }
+
+      .star-ctr li {
+        display: inline-block;
+      }
+
+      .star-ctr a>span {
+        font-size: 0.5em;
+      }
+
+      .star-ctr a>span:hover {
+        font-size: 0.55em;
+      }
+
+      .star-bg a>span {
+        color: silver !important;
+      }
+
+      .star-fg a>span {
+        color: #ffd400 !important;
+      }
+
+      .name {
+        display: none;
+      }
+
+      .p-t-136 {
+        padding-top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success_n">
+      <p>
+        <strong id="success_text">Karta została pomyślnie usunięta.</strong>
+      </p>
+    </div>
+    <div class="error_n">
+      <p>
+        <strong>Wystąpił błąd. Spróbuj ponownie.</strong>
+      </p>
+    </div>
+    <div class="js">
+      <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
+        <form action="" class="language-picker__form">
+          <label for="language-picker-select">Select your language</label>
+          <select name="language-picker-select" class="language-picker-select" id="language-picker-select">
+            <option id="pl_lang" lang="pl" value="polish">Polski</option>
+            <option id="en_lang" lang="en" value="english" selected>English</option>
+            <option id="de_lang" lang="de" value="deutsch">Deutsch</option>
+            <option id="fr_lang" lang="fr" value="francais">Français</option>
+            <option id="it_lang" lang="it" value="italiano">Italiano</option>
+            <option id="es_lang" lang="es" value="spanish">Spanish</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <div class="text-center p-t-136">
+      <a class="txt2" href="#" id="sign_in_top"> Sign in <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div style="display: inline-flex;">
+      <div class="subscription_options_icon">
+        <div id="subscription_options">
+          <img src="./images/subscription_options.png" width="18px" height="18px" />
+        </div>
+      </div>
+      <div class="home_icon">
+        <div id="home">
+          <img src="./images/home.png" width="18px" height="18px" />
+        </div>
+      </div>
+      <div class="help_icon">
+        <a id="need_help" href="https://aliproductfinder.com" target='_newtab'>
+          <img src="./images/need_help.png" width="18px" height="18px" />
+        </a>
+      </div>
+      <div class="logout_icon">
+        <div id="logout">
+          <img src="./images/logout.png" width="18px" height="18px" />
+        </div>
+      </div>
+    </div>
+    <section class="logged-out" style="display:none; position: absolute;  top: 0px;">
+      <section class="setup-info">
+        <div class="login_form loginArea login-area">
+          <div class="login100-form validate-form">
+            <span class="register100-form-title"> Ali Product Finder </span>
+            <div class="register100-text"></div>
+            <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+              <input class="input100 input_email" type="text" name="email" placeholder="Email">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Password is required">
+              <input class="input100 input_pass" type="password" name="pass" placeholder="Password">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="container-login100-form-btn">
+              <input class="login100-form-btn login-btn-auth sign_in" type="button" value="Sign in">
+            </div>
+            <div class="text-center p-t-12">
+              <span class="txt1"> Forgot </span>
+              <a class="txt2" href="#"> Username / Password? </a>
+            </div>
+            <div class="text-center p-t-136">
+              <a class="txt2" href="#" id="get_access"> Get access <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="signup-area" style="width:50%; display: none;">
+          <div class="register100-form validate-form">
+            <span class="register100-form-title"> Ali Product Finder </span>
+            <div class="register100-text">Sign up and test for free!</div>
+            <div class="test_free_register">
+              <div class="line"></div>
+              <div class="register-form-inputs">
+                <div class="wrap-input100 validate-input validate_input_email" data-validate="Valid email is required: ex@abc.xyz">
+                  <input class="register-input100 input_email" type="text" name="email" placeholder="Email">
+                  <span class="focus-input100"></span>
+                  <span class="register-symbol-input100">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </span>
+                  <div class="empty_email">This field can't be empty.</div>
+                  <div class="wrong_email">Please enter a valid email.</div>
+                  <div class="used_email">This email is already used.</div>
+                </div>
+                <div class="wrap-input100 validate-input validate_input_pass" data-validate="Password is required">
+                  <input class="register-input100 input_pass" type="password" name="pass" placeholder="Password">
+                  <span class="focus-input100"></span>
+                  <span class="register-symbol-input100" style="top: unset !important;">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                  </span>
+                  <div class="empty_pass">This field can't be empty.</div>
+                  <div class="wrong_pass">The password should contain at least 8 characters.</div>
+                </div>
+                <div class="container-login100-form-btn">
+                  <input class="login100-form-btn login-btn-auth sign_up" type="button" value="Sign up">
+                </div>
+                <div style="font-size: 9px; margin-top: 20px; color: #686868;">By clicking "SIGN UP", I accept the terms of service and activate the Ali Product Finder free 10-minutes test. Test without obligation, you can cancel when you want - with one mouse click in your profile after logging in.</div>
+                <div style="font-size: 9px; margin-top: 10px; color: #686868;" class="subscription_info">I agree to get immediate access to Ali Product Finder and at the same time activate the Ali Product Finder free 10 minutes test. I agree to send me marketing information by e-mail. You can cancel when you want - with one mouse click in your profile after logging in.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="thank_you_first_bought" class="thank_you_first_bought" style="height: 100%; margin: 0 auto; text-align: center; width: 100%; z-index: 9999; background: #efefef;">
+      <img style="    width: 90%; position: relative; top: 50px;margin: 0 auto; text-align: center; margin: 0 auto;" src="./images/thank_you.png" />
+      <div style="    text-align: center; font-size: 15px; margin-top: 64px;">Thank You for purchase. Your account is now full active. You will automatically redirect in 5 seconds.</div>
+    </section>
+    <section id="thank_you" class="thank_you" style="height: 100%; margin: 0 auto; text-align: center; width: 100%; z-index: 9999; background: #efefef;">
+      <img style="    width: 90%; position: relative; top: 50px;margin: 0 auto; text-align: center; margin: 0 auto;" src="./images/thank_you.png" />
+      <div style="    text-align: center; font-size: 15px; margin-top: 64px;">Thank You for register. Your account and Test Mode is now active. You will automatically logged in 5 seconds.</div>
+    </section>
+    <section class="sub_info" style="display: none; height: 100%; margin-top: 30px; width: 100%;">
+      <div id="delete_card_popout">
+        <div class="delete_card_popout2">
+          <div class="delete_card_popout_close">X</div>
+          <div class="delete_card_popout_title" id="are_you_sure_want_delete_text">Are you sure you want to delete?</div>
+          <div class="delete_card_popout_desc" id="if_you_remove_text">If you remove all cards from Ali Product Finder, we will not be able to collect payment for the next billing period, which will result in immediate termination of the subscription and no access to plug-in functionality after the end of the current billing period. <br>
+          </div>
+          <div class="delete_card_popout_desc" id="if_you_want_avoid_text"> If you want to avoid this, keep at least 1 active card in Ali Product Finder.</div>
+          <div class="delete_card_confirm container-login100-form-btn ">
+            <button id="delete_card" class="subscription_item_button_cancel_input  login100-form-btn login-btn-auth sign_up " type="button" value="Delete card">Delete card</button>
+          </div>
+        </div>
+      </div>
+      <div id="cancel_subscription_confirmation">
+        <div class="cancel_subscription_confirmation2">
+          <div class="cancel_subscription_close">X</div>
+          <div class="cancel_subscription_confirmation_title">Are you sure you want to unsubscribe?</div>
+          <div class="cancel_subscription_confirmation_desc">Your account will be active until the end of the accounting period - until 01/01/2022. After this time, new fees will not be applied until you reactivate the subscription.</div>
+          <div class="cancel_subscription_confirm container-login100-form-btn ">
+            <input id="cancel_subscription" class="subscription_item_button_cancel_input  login100-form-btn login-btn-auth sign_up " type="button" value="Cancel subscription">
+          </div>
+        </div>
+      </div>
+      <div id="info_popout">
+        <div class="info_popout2">
+          <div class="info_popout_close">X</div>
+          <div class="info_popout_title">Information</div>
+          <div class="info_popout_desc">If you wish to change your billing details, please contact us at: mail@aliproductfinder.com.</div>
+          <div class="understand_confirm container-login100-form-btn ">
+            <input id="understand" class="subscription_item_button_cancel_input  login100-form-btn login-btn-auth sign_up " type="button" value="I understand">
+          </div>
+        </div>
+      </div>
+      <div id="add_card_popout">
+        <div class="add_card_popout2">
+          <div class="add_card_popout_close">X</div>
+          <div id="add_card_popout_title" class="add_card_popout_title">Add card</div>
+          <div id="add_card_popout_desc" class="add_card_popout_desc">Enter card details and confirm.</div>
+          <div class="wrap-input100 validate-input" data-validate="Card details are required" style="margin-top: 15px;">
+            <iframe style="width:100%;border:none;height:40px;" src="stripeFrame.html"></iframe>
+          </div>
+          <div class="add_card_confirm container-login100-form-btn " style="padding-top: 0px;">
+            <input id="add_cardd" class="subscription_item_button_update_input  login100-form-btn login-btn-auth sign_up " type="button" value="Confirm">
+          </div>
+        </div>
+      </div>
+      <div class="ali_product_finder_text" id="billing_text" style="    font-size: 24px; margin-left: 3px;">Billing</div>
+      <div class="curr_plan_info">
+        <div class="nav2_text" id="current_plan_text">CURRENT PLAN</div>
+        <hr>
+        <div class="subscription_item_title">Ali Product Finder</div>
+        <div class="subscription_item_price">€ -.-- per ---</div>
+        <div class="subscription_item_renews_time">Your plan renews on --- --, -- using -- **** ----.</div>
+        <div class="subscription_item_renews_time_lifetime">You have a lifetime plan, which means you don't have to pay anything anymore. However, due to the limitations of Stripe, we will be debiting € 0.00 from your card. If you remove the card from Ali Product Finder, you will still be able to use the plugin function.</div>
+        <div style="display: inline-flex;     margin-left: 5px;" id="buttons_plan">
+          <div class="subscription_item_button_update container-login100-form-btn ">
+            <button id="update_plan_button" class="subscription_item_button_update_input login100-form-btn login-btn-auth sign_up " type="button" value="Update plan">Update plan</button>
+          </div>
+          <div class="subscription_item_button_cancel container-login100-form-btn ">
+            <button class="subscription_item_button_cancel_input login100-form-btn login-btn-auth sign_up " type="button" value="Cancel plan">Cancel plan</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav2_text" id="payment_method_text" style="margin-top: 30px;">PAYMENT METHOD</div>
+      <hr>
+      <div id="add_card" class="container-login100-form-btn ">
+        <button id="add_card_btn" class="add_card_btn login100-form-btn login-btn-auth sign_up " type="button" value="Add card">Add card</button>
+      </div>
+      <div style="display: inline-flex;    height: 25px;     margin-left: 5px;" id="card_data">
+        <img width="20px" height="20px" src="/images/visa.png" id="visa" class="payment_method_img" />
+        <img width="20px" height="20px" src="/images/mastercard.png" id="mastercard" class="payment_method_img" />
+        <div class="payment_method_card"> **** ----</div>
+        <div class="payment_method_card_expiration"> Expires --/---- </div>
+        <div class="payment_method_card_edit" style="cursor: pointer;">
+          <div class="payment_method_edit_dots">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="nav2_text" id="billing_information_text" style="margin-top: 20px;">BILLING INFORMATION</div>
+      <hr>
+      <div style="display: grid; padding-top: 10px;">
+        <div style="display: inline-flex;    padding-bottom: 5px;">
+          <div class="billing_information_text">Email</div>
+          <div class="billing_information_title" id="subscription_email_billing"></div>
+        </div>
+        <div style="display: inline-flex;    padding-bottom: 5px;">
+          <div class="billing_information_text" id="name_lastname_text">Name and lastname</div>
+          <div class="billing_information_title" id="subscription_name_billing"></div>
+        </div>
+        <div style="display: inline-flex;    padding-bottom: 5px;">
+          <div class="billing_information_text" id="address_line_one_text">Address Line 1</div>
+          <div class="billing_information_title" id="subscription_line1_billing"></div>
+        </div>
+        <div style="display: inline-flex;    padding-bottom: 5px;">
+          <div class="billing_information_text" id="address_line_two_text">Address Line 2</div>
+          <div class="billing_information_title" id="subscription_line2_billing"></div>
+        </div>
+        <div style="display: inline-flex;    padding-bottom: 5px;">
+          <div class="billing_information_text" id="postcode_text">Postcode</div>
+          <div class="billing_information_title" id="subscription_postcode_billing"></div>
+        </div>
+        <div style="display: inline-flex;    padding-bottom: 5px;">
+          <div class="billing_information_text" id="city_text">City</div>
+          <div class="billing_information_title" id="subscription_city_billing"></div>
+        </div>
+        <div style="display: inline-flex;">
+          <div class="billing_information_text" id="country_text">Country</div>
+          <div class="billing_information_title" id="subscription_country_billing"></div>
+        </div>
+      </div>
+      <div style="display: inline-flex; cursor: pointer; ">
+        <div class="billing_information_update" style="position: relative; height: 20px;"></div>
+        <div class="billing_information_update_text" id="update_information_text">Update information</div>
+      </div>
+      <div class="nav2_text" id="billing_history_text" style="margin-top: 20px;">BILLING HISTORY</div>
+      <hr style="margin-bottom: 0px;">
+      <div class="billing_history_three_latest" style="display: grid;">
+        <div style="display: inline-flex; padding-top: 10px;">
+          <div class="billing_history_date">--- --, ----</div>
+          <div class="billing_history_icon">
+            <img src="images/box-arrow-up-right.svg" width="10px" height="10px" style=" cursor: pointer;   position: absolute; margin-left: 5px;" />
+          </div>
+          <div class="billing_history_price">$--.--</div>
+          <div class="billing_history_title">Ali Product Finder</div>
+        </div>
+      </div>
+      <div id="show_more_billing_history">Show more <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+      </div>
+    </section>
+    <section class="buySubscription" style="display:none;     width: 100%;    height: 100%; margin-top:30px;">
+      <div class="register100-form validate-form" style="width: 100%;">
+        <span class="register100-form-title" style="padding-top: 25px; "> Ali Product Finder </span>
+        <div class="register100-text" style="    padding-bottom: 0px; margin-bottom: -5px;">The free trial has ended.</div>
+        <div class="register100-text">Choose the plan that's right for you</div>
+        <div class="choose_plan" style="width: 290px; margin:  0 auto;">
+          <div class="line" style="left: 30px;"></div>
+          <div class="save_up_yearly_text">Save up to 80% with yearly</div>
+          <div class="tab" role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="tabcontent" id="yearly-tab">
+                <a href="#yearly" aria-controls="home" role="tab" data-toggle="tab">Yearly</a>
+              </li>
+              <li role="presentation" class="tabcontent active" id="monthly-tab">
+                <a href="#monthly" aria-controls="profile" role="tab" data-toggle="tab">Monthly</a>
+              </li>
+              <li role="presentation" class="tabcontent" id="lifetime-tab">
+                <a href="#lifetime" aria-controls="messages" role="tab" data-toggle="tab">Lifetime</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="register-form-inputs">
+              <div class="wrap-input100 validate-input" data-validate="Card details are required">
+                <iframe style="width:100%;border:none;height:40px;" src="stripeFrame.html"></iframe>
+              </div>
+              <div class="address-form">
+                <div style="font-weight: bold; font-size: 17px;    float: left;
+                                            color: #686868;  ">Billing address:</div>
+                <div style="margin-top: 10px;">
+                  <div style="display: inline-flex;">
+                    <div class="wrap-input200 validate-input validate_input_name_billing" data-validate="Valid name is required" style="width: 42%;">
+                      <input class="register-input200 input_name_billing" type="text" name="name" placeholder="Name">
+                      <span class="focus-input200"></span>
+                      <div class="empty_name_billing">This field can't be empty.</div>
+                      <div class="wrong_name_billing">Please enter a valid name.</div>
+                    </div>
+                    <div class="wrap-input200 validate-input validate_input_lastname_billing" data-validate="Valid lastname is required" style="width: 56%;     margin-left: 8px;">
+                      <input class="register-input200 input_lastname_billing" type="text" name="lastname" placeholder="Lastname">
+                      <span class="focus-input200"></span>
+                      <div class="empty_lastname_billing">This field can't be empty.</div>
+                      <div class="wrong_lastname_billing">Please enter a valid lastname.</div>
+                    </div>
+                  </div>
+                  <div class="wrap-input200 validate-input validate_input_line1" data-validate="Address 1 is required">
+                    <input class="register-input200 input_address1" type="text" name="line1" placeholder="Address line 1">
+                    <span class="focus-input200"></span>
+                    <div class="empty_line1">This field can't be empty.</div>
+                    <div class="wrong_line1">Please enter a valid address.</div>
+                  </div>
+                  <div class="wrap-input200 validate-input">
+                    <input class="register-input200 input_address2" type="text" name="line2" placeholder="Address line 2 (optional)">
+                    <span class="focus-input200"></span>
+                  </div>
+                  <div class="wrap-input200 validate-input validate_input_city" style="margin-bottom: 0px;">
+                    <input class="register-input200 input_city" type="text" name="city" placeholder="City">
+                    <span class="focus-input200"></span>
+                    <div class="empty_city">This field can't be empty.</div>
+                    <div class="wrong_city">Please enter a valid city.</div>
+                  </div>
+                  <div style="display: inline-flex;">
+                    <select class="selectpicker countrypicker input_country" data-countries="AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE" data-flag="true" data-default="PL" data-live-search="true"></select>
+                    <div class="wrap-input100 validate-input validate_input_postcode" data-validate="Postcode is required" style="    width: 110px; ">
+                      <input class="register-input200 input_postcode" type="text" name="postcode" style=" padding: 0 15px 0 15px; width: 100px;" placeholder="Postcode">
+                      <span class="focus-input200"></span>
+                      <div class="empty_postcode">This field can't be empty.</div>
+                      <div class="wrong_postcode">Please enter a valid postcode.</div>
+                    </div>
+                  </div>
+                  <div style="    width: 100%;     width: 100%; font-size: 11px;color: #686868;line-height: 18px; text-align: left;">We will use this address to issue an e-invoice(s).</div>
+                </div>
+              </div>
+              <div class="tab-content tabs" style="padding: 0;">
+                <div role="tabpanel" class="tab-pane fadein" id="yearly" style="width: 280px;">
+                  <hr style="    margin-bottom: 1.5rem;">
+                  <div style="font-weight: bold; font-size: 17px;  " id="order_details_text">Order details:</div>
+                  <div style="display: grid">
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%;">Ali Product Finder</div>
+                    </div>
+                    <div style="display: inline-flex;     margin-top: 10px;">
+                      <div style="    width: 100%; font-size: 14px;" id="plan_subscription_text">Subscription Plan:</div>
+                      <div style="   display: flex; font-size: 14px;  text-align: end;  right: 37px;  position: absolute;">
+                        <div style="margin-right: 3px;">€ 9.99 </div>
+                        <div id="per_month_text" style="margin-right: 3px;">per month</div> x 12
+                      </div>
+                    </div>
+                    <div class="special_discounts_yearly">
+                      <div style="    width: 100%; font-size: 14px;" id="special_discounts_text">Special Discounts:</div>
+                      <div class="count_special_discount_yearly" style="      font-size: 14px;  text-align: end; width: 100%;"> - € 12.00 </div>
+                    </div>
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%; font-size: 14px;" class="tax_rate_yearly">Tax (23% inclusive):</div>
+                      <div class="tax_rate_count_yearly" style="      font-size: 14px;  text-align: end; width: 100%;">€ 22.44</div>
+                    </div>
+                    <hr style="    margin-top: 2rem;
+                                                        margin-bottom: 1rem;">
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%;     font-size: 19px; font-weight: bold;" id="total_text">Total:</div>
+                      <div class="total_old_yearly">€ 119.99</div>
+                      <div class="total_new_yearly" style=" font-size: 17px; text-align: end; width: 100%; font-weight: bold;">€ 39.99</div>
+                    </div>
+                    <div class="coupon_saved_yearly">
+                      <div style="     width: 100%;  font-size: 12px; font-style: italic;" id="you_saved_text">You saved:</div>
+                      <div class="count_saved_yearly">€ 4.00</div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fadein active" id="monthly" style="width: 280px;">
+                  <hr style="    margin-bottom: 1.5rem;">
+                  <div style="font-weight: bold; font-size: 17px;  " id="order_details_text2">Order details:</div>
+                  <div style="display: grid">
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%;">Ali Product Finder</div>
+                    </div>
+                    <div style="display: inline-flex;     margin-top: 10px;">
+                      <div style="    width: 100%; font-size: 14px;" id="plan_subscription_text2">Subscription Plan:</div>
+                      <div style="    display: flex;     right: 35px;  position: absolute;  font-size: 14px;  text-align: end;">
+                        <div style="margin-right: 3px;">€ 49.99 </div>
+                        <div id="per_month_text2" style="margin-right: 3px;">per month</div>
+                      </div>
+                    </div>
+                    <div class="special_discounts_monthly">
+                      <div style="    width: 100%; font-size: 14px;" id="special_discounts_text2">Special Discounts:</div>
+                      <div class="count_special_discount_monthly" style="      font-size: 14px;  text-align: end; width: 100%;"> - € 5.00 </div>
+                    </div>
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%; font-size: 14px;" class="tax_rate_monthly">Tax (23% inclusive):</div>
+                      <div class="tax_rate_count_monthly" style="      font-size: 14px;  text-align: end; width: 100%;">€ 9.35</div>
+                    </div>
+                    <hr style="    margin-top: 2rem;
+                                                        margin-bottom: 1rem;">
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%;     font-size: 19px; font-weight: bold;" id="total_text2">Total:</div>
+                      <div class="total_old_monthly">€ 49.99</div>
+                      <div class="total_new_monthly" style=" font-size: 17px; text-align: end; width: 100%; font-weight: bold;">€ 49.99</div>
+                    </div>
+                    <div class="coupon_saved_monthly">
+                      <div style="     width: 100%;  font-size: 12px; font-style: italic;" id="you_saved_text2">You saved:</div>
+                      <div class="count_saved_monthly">€ 1.00</div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fadein" id="lifetime" style="width: 280px;">
+                  <hr style="    margin-bottom: 1.5rem;">
+                  <div style="font-weight: bold; font-size: 17px;  " id="order_details_text2">Order details:</div>
+                  <div style="display: grid">
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%;">Ali Product Finder</div>
+                    </div>
+                    <div style="display: inline-flex;     margin-top: 10px;">
+                      <div style="    width: 100%; font-size: 14px;" id="plan_lifetime_text">Lifetime Plan:</div>
+                      <div style="      font-size: 14px;  text-align: end; width: 100%;">€ 249.99</div>
+                    </div>
+                    <div class="special_discounts_lifetime">
+                      <div style="    width: 100%; font-size: 14px;" id="special_discounts_text3">Special Discounts:</div>
+                      <div class="count_special_discount" style="      font-size: 14px;  text-align: end; width: 100%;"> - € 25.00 </div>
+                    </div>
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%; font-size: 14px;" class="tax_rate_lifetime">Tax (23% inclusive):</div>
+                      <div class="tax_rate_count_lifetime" style="      font-size: 14px;  text-align: end; width: 100%;">€ 46.75</div>
+                    </div>
+                    <hr style="    margin-top: 2rem;
+                                                        margin-bottom: 1rem;">
+                    <div style="display: inline-flex;">
+                      <div style="    width: 100%;     font-size: 19px; font-weight: bold;" id="total_text3">Total:</div>
+                      <div class="total_old_lifetime">€ 249.99</div>
+                      <div class="total_new_lifetime" style=" font-size: 17px; text-align: end; width: 100%; font-weight: bold;">€ 249.99</div>
+                    </div>
+                    <div class="coupon_saved_lifetime">
+                      <div style="     width: 100%;  font-size: 12px; font-style: italic;" id="you_saved_text3">You saved:</div>
+                      <div class="count_saved_lifetime">€ 9.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="    padding-bottom: 20px;
+                                                left: 0;    width: 100%;" class="coupon_area">
+                <div style="cursor: pointer;     text-align: end; width: 280px;     font-size: 10px;
+                                                position: absolute;
+                                                margin-top: -5px;
+                                                color: grey; 
+                                                font-size: 11px;
+                                                position: absolute;
+                                                margin-top: 3px;" class="have_a_coupon">Have a coupon?</div>
+                <div style="    text-align: left;">
+                  <div class="has_coupon">
+                    <div class="wrap-input100 validate-input" data-validate="Coupon code is not required">
+                      <input class="coupon-input100 input_coupon" type="text" name="coupon" placeholder="Coupon code (optional)">
+                      <span class="focus-input100"></span>
+                    </div>
+                    <input type="button" class="coupon-input-button100 input_coupon_button" value="Apply" />
+                  </div>
+                </div>
+                <div class="code_section" style="text-align: left;">
+                  <div class="info_code">If you do not know any code, please leave this field blank.</div>
+                  <div class="wrong_code">This promo code is incorrect.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="plans" style="display: none;">
+            <li class="plan highlight">
+              <span class="price price-green">0€</span>
+              <div class="details">
+                <h1 class="plan-title">Free</h1>
+                <p class="plan-description">Not even a cookie</p>
+              </div>
+            </li>
+            <li class="plan">
+              <span class="price price-red">10€</span>
+              <div class="details">
+                <h1 class="plan-title">Monthly</h1>
+                <p class="plan-description">With candy and stuff</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="container-login100-form-btn" style="width: 280px; margin: 0 auto;">
+          <input class="login100-form-btn login-btn-auth sign_up" id="buy_access" type="button" value="Get access">
+        </div>
+        <div style="font-size: 9px;  color: #686868; width: 280px; margin: 0 auto; margin-top: 20px;">By clicking "GET ACCESS", I accept the terms of service and activate the Ali Product Finder subscription. Subscription without obligation, you can cancel when you want - with one mouse click in your profile after logging in.</div>
+        <div style="font-size: 9px; color: #686868; width: 280px; margin: 0 auto;  margin-top: 10px;" class="subscription_info">I agree to get immediate access to Ali Product Finder and at the same time activate the Ali Product Finder subscription. I agree to bear the monthly subscription costs until I cancel the service.</div>
+        <div style="    font-size: 9px; top: -5px; display: flex; width: 280px; margin: 0 auto;  color: #686868;" class="fee_info">
+          <span class="change_text_fee">The monthly cost of the service is</span>
+          <div class="subscription_cost_terms_update" style="font-size: 10px;  color: #686868; margin-top: -2px; font-weight: bold; margin-left: 5px;"> € 49.99</div>.
+        </div>
+      </div>
+    </section>
+    <section class="logged-in userArea" style="display:none;     width: 100%;    height: 100%; margin-top:30px;">
+      <div id="renew_subscription_popout">
+        <div class="renew_subscription_popout2">
+          <div class="renew_subscription_popout_close">X</div>
+          <div class="choose_plan_renew">
+            <div class="line"></div>
+            <div class="save_up_yearly_text">Save up to 80% with yearly</div>
+            <div class="tab" role="tabpanel">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="tabcontent" id="yearly-tab_renew">
+                  <a href="#yearly_renew" aria-controls="home" role="tab" data-toggle="tab">Yearly</a>
+                </li>
+                <li role="presentation" class="tabcontent active" id="monthly-tab_renew">
+                  <a href="#monthly_renew" aria-controls="profile" role="tab" data-toggle="tab">Monthly</a>
+                </li>
+                <li role="presentation" class="tabcontent" id="lifetime-tab_renew">
+                  <a href="#lifetime_renew" aria-controls="messages" role="tab" data-toggle="tab">Lifetime</a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="register-form-inputs" style="margin-top: -5px;">
+                <div class="tab-content tabs" style="padding: 0;">
+                  <div role="tabpanel" class="tab-pane fadein" id="yearly_renew">
+                    <hr style="    margin-bottom: 1.5rem;">
+                    <div style="font-weight: bold; font-size: 17px;  " id="order_details_text_renew">Order details:</div>
+                    <div style="display: grid">
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%;">Ali Product Finder</div>
+                      </div>
+                      <div style="display: inline-flex;      position: relative;   margin-top: 10px;">
+                        <div style="    width: 100%; font-size: 14px;" id="plan_subscription_text">Subscription Plan:</div>
+                        <div style="   display: flex;   font-size: 14px;  text-align: end;  right: 0;  position: absolute;">
+                          <div style="margin-right: 3px;">€ 3.33</div>
+                          <div id="per_month_text_renew" style="margin-right: 3px;">per month</div>
+                          <div>x 12</div>
+                        </div>
+                      </div>
+                      <div class="special_discounts_yearly_renew">
+                        <div style="    width: 100%; font-size: 14px;" id="special_discounts_text_renew">Special Discounts:</div>
+                        <div class="count_special_discount_yearly_renew" style="      font-size: 14px;  text-align: end; width: 100%;"> - € 4.00 </div>
+                      </div>
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%; font-size: 14px;" class="tax_rate_yearly_renew">Tax (23% inclusive):</div>
+                        <div class="tax_rate_count_yearly_renew" style="      font-size: 14px;  text-align: end; width: 100%;">€ 1.87</div>
+                      </div>
+                      <hr style="    margin-top: 2rem;
+    margin-bottom: 1rem;">
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%;     font-size: 19px; font-weight: bold;" id="total_text_renew">Total:</div>
+                        <div class="total_old_yearly_renew">€ 39.99</div>
+                        <div class="total_new_yearly_renew" style=" font-size: 17px; text-align: end; width: 100%; font-weight: bold;">€ 39.99</div>
+                      </div>
+                      <div class="coupon_saved_yearly_renew">
+                        <div style="     width: 100%;  font-size: 12px; font-style: italic;" id="you_saved_text_renew">You saved:</div>
+                        <div class="count_saved_yearly_renew">€ 4.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fadein active" id="monthly_renew" style="width: 290px;">
+                    <hr style="    margin-bottom: 1.5rem;">
+                    <div style="font-weight: bold; font-size: 17px;  " id="order_details_text2_renew">Order details:</div>
+                    <div style="display: grid">
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%;">Ali Product Finder</div>
+                      </div>
+                      <div style="display: inline-flex;     margin-top: 10px;     position: relative;">
+                        <div style="    width: 100%; font-size: 14px;" id="plan_subscription_text2_renew">Subscription Plan:</div>
+                        <div style="   display: flex; right: 25px;  position: absolute;    font-size: 14px;  text-align: end;">
+                          <div style="margin-right: 3px;">€ 49.99 </div>
+                          <div id="per_month_text2_renew">per month</div>
+                        </div>
+                      </div>
+                      <div class="special_discounts_monthly_renew">
+                        <div style="    width: 100%; font-size: 14px;" id="special_discounts_text2_renew">Special Discounts:</div>
+                        <div class="count_special_discount_monthly_renew" style="      font-size: 14px;  text-align: end; width: 100%;"> - € 1.00 </div>
+                      </div>
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%; font-size: 14px;" class="tax_rate_monthly_renew">Tax (23% inclusive):</div>
+                        <div class="tax_rate_count_monthly_renew" style="      font-size: 14px;  text-align: end; width: 100%;">€ 1.87</div>
+                      </div>
+                      <hr style="    margin-top: 2rem;
+    margin-bottom: 1rem;">
+                      <div style="display: inline-flex; ">
+                        <div style="    width: 100%;     font-size: 19px; font-weight: bold;" id="total_text2_renew">Total:</div>
+                        <div class="total_old_monthly_renew">€ 49.99</div>
+                        <div class="total_new_monthly_renew" style=" font-size: 17px; text-align: end; width: 100%; font-weight: bold;">€ 49.99</div>
+                      </div>
+                      <div class="coupon_saved_monthly_renew">
+                        <div style="     width: 100%;  font-size: 12px; font-style: italic;" id="you_saved_text2_renew">You saved:</div>
+                        <div class="count_saved_monthly_renew">€ 1.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fadein" id="lifetime_renew">
+                    <hr style="    margin-bottom: 1.5rem;">
+                    <div style="font-weight: bold; font-size: 17px;  " id="order_details_text2_renew">Order details:</div>
+                    <div style="display: grid">
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%;">Ali Product Finder</div>
+                      </div>
+                      <div style="display: inline-flex;     margin-top: 10px;     position: relative;">
+                        <div style="    width: 100%; font-size: 14px;" id="plan_lifetime_text_renew">Lifetime Plan:</div>
+                        <div style="      font-size: 14px;  text-align: end; width: 100%;">€ 249.99</div>
+                      </div>
+                      <div class="special_discounts_lifetime_renew">
+                        <div style="    width: 100%; font-size: 14px;" id="special_discounts_text3_renew">Special Discounts:</div>
+                        <div class="count_special_discount_renew" style="      font-size: 14px;  text-align: end; width: 100%;"> - € 9.00 </div>
+                      </div>
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%; font-size: 14px;" class="tax_rate_lifetime_renew">Tax (23% inclusive):</div>
+                        <div class="tax_rate_count_lifetime_renew" style="      font-size: 14px;  text-align: end; width: 100%;">€ 1.87</div>
+                      </div>
+                      <hr style="    margin-top: 2rem;
+    margin-bottom: 1rem;">
+                      <div style="display: inline-flex;">
+                        <div style="    width: 100%;     font-size: 19px; font-weight: bold;" id="total_text3_renew">Total:</div>
+                        <div class="total_old_lifetime_renew">€ 249.99</div>
+                        <div class="total_new_lifetime_renew" style=" font-size: 17px; text-align: end; width: 100%; font-weight: bold;">€ 249.99</div>
+                      </div>
+                      <div class="coupon_saved_lifetime_renew">
+                        <div style="     width: 100%;  font-size: 12px; font-style: italic;" id="you_saved_text3_renew">You saved:</div>
+                        <div class="count_saved_lifetime_renew">€ 9.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div style=" 
+    left: 0; position: relative;   width: 100%;" class="coupon_area_renew pbottom">
+                    <div style="cursor: pointer;     text-align: end; width: 100%;     font-size: 10px;
+    position: absolute;
+    margin-top: -5px;
+    color: grey; 
+    font-size: 11px;
+    position: absolute;
+    margin-top: 3px;" class="have_a_coupon_renew">Have a coupon?</div>
+                    <div style="    text-align: left;">
+                      <div class="has_coupon_renew">
+                        <div class="wrap-input100 validate-input" data-validate="Coupon code is not required">
+                          <input class="coupon-input100_renew input_coupon_renew" type="text" name="coupon" placeholder="Coupon code (optional)">
+                          <span class="focus-input100"></span>
+                        </div>
+                        <input type="button" class="coupon-input-button100_renew input_coupon_button_renew" value="Apply" />
+                      </div>
+                    </div>
+                    <div class="code_section_renew" style="text-align: left;">
+                      <div class="info_code_renew">If you do not know any code, please leave this field blank.</div>
+                      <div class="wrong_code_renew">This promo code is incorrect.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="plans" style="display: none;">
+              <li class="plan highlight">
+                <span class="price price-green">0€</span>
+                <div class="details">
+                  <h1 class="plan-title">Free</h1>
+                  <p class="plan-description">Not even a cookie</p>
+                </div>
+              </li>
+              <li class="plan">
+                <span class="price price-red">10€</span>
+                <div class="details">
+                  <h1 class="plan-title">Monthly</h1>
+                  <p class="plan-description">With candy and stuff</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="add_card_renew">
+            <div class="wrap-input100 validate-input" data-validate="Card details are required" style="margin-top: 15px;">
+              <iframe style="width:100%;border:none;height:40px;" src="stripeFrame.html"></iframe>
+            </div>
+          </div>
+          <div id="renew_subscription_card_details">
+            <div class="we_will_charge_fee">We will charge a fee from this card</div>
+            <div style="display: inline-flex;    height: 25px;     margin-left: 5px;" id="card_data_renew">
+              <img width="20px" height="20px" src="/images/visa.png" id="visa" class="payment_method_img" />
+              <img width="20px" height="20px" src="/images/mastercard.png" id="mastercard" class="payment_method_img" />
+              <div class="payment_method_card_renew"> **** ----</div>
+              <div class="payment_method_card_expiration_renew"> Expires --/---- </div>
+            </div>
+          </div>
+          <div class="renew_subscription_confirm container-login100-form-btn " style="padding-top: 0px;">
+            <input id="renew_subscriptionn" class="subscription_item_button_update_input  login100-form-btn login-btn-auth sign_up " type="button" value="Renew">
+          </div>
+          <div style="font-size: 9px; margin-top: 10px; color: #686868;" class="subscription_info_renew">I agree to get immediate access to Ali Product Finder and at the same time activate the Ali Product Finder subscription. I agree to bear the monthly subscription costs until I cancel the service.</div>
+          <div style="    font-size: 9px; top: -20px; position: relative; display: inline-flex;  color: #686868;" class="fee_info_renew">
+            <span class="change_text_fee_renew">The monthly cost of the service is</span>
+            <div class="subscription_cost_terms_update_renew" style="font-size: 10px;  color: #686868; margin-top: -2px; font-weight: bold; margin-left: 5px;"> € 49.99</div>.
+          </div>
+        </div>
+      </div>
+      <div id="image_div"></div>
+      <div style="display: inline-flex;">
+        <div class="ali_product_finder_text_div">
+          <div class="ali_product_finder_text">Ali Product Finder </div>
+          <div class="ali_product_finder_valid_text">Valid to: --.--.----</div>
+        </div>
+        <div class="enable_disable">
+          <input type="checkbox" id="toggle" />
+          <label for="toggle"></label>
+        </div>
+        <div class="renew_plan">
+          <button class="subscription_item_button_update_input login100-form-btn login-btn-auth sign_up " class="renew_button" id="renew_text">Renew</button>
+        </div>
+      </div>
+      <div class="to_blur">
+        <div class="shippment_from">
+          <div class="shippment_from_text" style="font-weight:  bold; font-size: 18px; line-height: 2.1; margin-left: 5px;">Express shippment from:</div>
+          <div class="center_inside">
+            <button style="display: inline-flex;     width: 100%;" class="flags_shippment">
+              <button style="width: 47px; height: 30px; margin-left: 0px;" class="flag_shippment uk_shippment" value="UK" />
+              <button style="width: 47px; height: 30px;" class="flag_shippment pl_shippment" value="PL" />
+              <button style="width: 47px; height: 30px;" class="flag_shippment es_shippment" value="ES" />
+              <button style="width: 47px; height: 30px;" class="flag_shippment fr_shippment" value="FR" />
+              <button style="width: 47px; height: 30px;" class="flag_shippment de_shippment" value="DE" />
+          </div>
+        </div>
+        <div class="center_inside">
+          <div style="display: inline-flex;" class="flags_shippment">
+            <button style="width: 47px; height: 30px; margin-left: 0px;" class="flag_shippment cz_shippment" value="CZ" />
+            <button style="width: 47px; height: 30px;" class="flag_shippment it_shippment" value="IT" />
+            <button style="width: 47px; height: 30px;" class="flag_shippment be_shippment" value="BE" />
+            <button style="width: 47px; height: 30px;" class="flag_shippment ch_shippment" value="CH" />
+          </div>
+        </div>
+        <div class="download_images">
+          <div class="download_image_text" style="font-weight:  bold; font-size: 18px; line-height: 2.1; margin-left: 5px; padding-bottom: 10px;">Download Aliexpress images:</div>
+          <div class="center_inside">
+            <button class="download-button download-small-button" title="Download all images" id="all_images" style="    width: 70px;  margin-right: 10px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>All</span>
+            </button>
+            <button class="download-button download-small-button" title="Download main images" id="main_images" style="    width: 80px; margin-right: 10px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>Main</span>
+            </button>
+            <button class="download-button download-small-button" title="Download description images" id="desc_images" style="width: 120px">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>Description</span>
+            </button>
+          </div>
+          <div class="center_inside">
+            <button class="download-button download-small-button" title="Download variant images" id="variant_images" style="width: 90px; margin-right: 10px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>Variant</span>
+            </button>
+            <button class="download-button download-small-button" title="Download reviews images" id="reviews_images" style="    width: 100px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>Reviews</span>
+            </button>
+          </div>
+          <div class="download_image_text" style="font-weight:  bold; font-size: 18px; line-height: 2.1; margin-left: 5px; padding-top: 15px;">Download Shopee images:</div>
+          <div class="center_inside">
+            <button class="download-button download-small-button shopee_button" title="Download all images" id="all_images_shopee" style="    width: 70px;  margin-right: 10px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>All</span>
+            </button>
+            <button class="download-button download-small-button shopee_button" title="Download main images" id="main_images_shopee" style="    width: 80px; margin-right: 10px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>Main</span>
+            </button>
+            <button class="download-button download-small-button shopee_button" title="Download reviews images" id="reviews_images_shopee" style="    width: 100px;">
+              <div class="download-icon-container">
+                <svg class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-32-316v116h-67c-10.7 0-16 12.9-8.5 20.5l99 99c4.7 4.7 12.3 4.7 17 0l99-99c7.6-7.6 2.2-20.5-8.5-20.5h-67V140c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12z"></path>
+                </svg>
+                <!-- <div class="far fa-arrow-alt-circle-down"></div> -->
+              </div>
+              <span>Reviews</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="rate_us">
+      <div class="text" id="rate_us_text">Rate us</div>
+      <div class="star-ctr" data-value="4.4">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-star"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-star"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-star"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-star"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-star"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="./scripts/jszip.js"></script>
+    <script type="text/javascript" src="./scripts/jszip-utils.js"></script>
+    <script type="text/javascript" src="./scripts/FileSaver.js"></script>
+    <script src="./scripts/stars.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/language_picker.js"></script>
+    <script src="./scripts/popper.js"></script>
+    <script src="./scripts/select2.min.js"></script>
+    <script src="./scripts/tilt.jquery.min.js"></script>
+    <script src="./scripts/bootstrap-select.min.js"></script>
+    <script src="./scripts/confetti.browser.min.js"></script>
+    <script src="./scripts/bootstrap-select-country.min.js"></script>
+    <script async src="./scripts/app.js"></script>
+    <script async data-logspot-pk="pk_GDwKnGRhSWH_p86euJDLmOJ0fck0-Bpox2XSDTOM" src="./scripts/logspot.js"></script>
+  </body>
+</html>

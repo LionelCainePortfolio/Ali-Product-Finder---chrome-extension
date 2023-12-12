@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <translations>
+    <translation id="info-text">
+      <polish>Odnów subskrypcję, by móc korzystać z wtyczki</polish>
+      <english>Renew your subscription to use the extension</english>
+      <deutsch>Erneuern Sie Ihr Abonnement, um die Erweiterung zu verwenden</deutsch>
+      <francais>Renouvelez votre abonnement pour utiliser l'extension</francais>
+      <italiano>Rinnova l'abbonamento per utilizzare l'estensione</italiano>
+      <spanish>Renueva tu suscripción para usar la extensión</spanish>
+    </translation>
+    <translation id="current_plan_text">
+      <polish>OBECNY PLAN</polish>
+      <english>CURRENT PLAN</english>
+      <deutsch>DERZEITIGER PLAN</deutsch>
+      <francais>PLAN ACTUEL</francais>
+      <italiano>PIANO ATTUALE</italiano>
+      <spanish>PLAN ACTUAL</spanish>
+    </translation>
+    <translation id="billing_text">
+      <polish>Dane do faktury</polish>
+      <english>Billing</english>
+      <deutsch>Abrechnung</deutsch>
+      <francais>Facturation</francais>
+      <italiano>Fatturazione</italiano>
+      <spanish>Facturación</spanish>
+    </translation>
+    <translation id="payment_method_text">
+      <polish>METODA PŁATNOŚCI</polish>
+      <english>PAYMENT METHOD</english>
+      <deutsch>BEZAHLVERFAHREN</deutsch>
+      <francais>MODE DE PAIEMENT</francais>
+      <italiano>METODO DI PAGAMENTO</italiano>
+      <spanish>MÉTODO DE PAGO</spanish>
+    </translation>
+    <translation id="billing_information_text">
+      <polish>DANE DO FAKTURY</polish>
+      <english>BILLING INFORMATION</english>
+      <deutsch>ABRECHNUNGSDATEN</deutsch>
+      <francais>DÉTAILS DE FACTURATION</francais>
+      <italiano>INFORMAZIONI DI FATTURAZIONE</italiano>
+      <spanish>DATOS DE FACTURACIÓN</spanish>
+    </translation>
+    <translation id="billing_history_text">
+      <polish>HISTORIA ROZLICZEŃ</polish>
+      <english>BILLING HISTORY</english>
+      <deutsch>ABRECHNUNGSVERLAUF</deutsch>
+      <francais>HISTORIQUE DE FACTURATION</francais>
+      <italiano>STORICO DI FATTURAZIONE</italiano>
+      <spanish>HISTORIAL DE FACTURACIÓN</spanish>
+    </translation>
+    <translation id="rate_us_text">
+      <polish>Oceń nas</polish>
+      <english>Rate us</english>
+      <deutsch>Bewerten Sie uns</deutsch>
+      <francais>Évaluez nous</francais>
+      <italiano>Valutaci</italiano>
+      <spanish>Nos califica</spanish>
+    </translation>
+    <translation id="renew_text">
+      <polish>Odnów</polish>
+      <english>Renew</english>
+      <deutsch>Erneuern</deutsch>
+      <francais>Renouveler</francais>
+      <italiano>Rinnovare</italiano>
+      <spanish>Renovar</spanish>
+    </translation>
+    <translation id="update_information_text">
+      <polish>Zaktualizuj informacje</polish>
+      <english>Update information</english>
+      <deutsch>Informationen aktualisieren</deutsch>
+      <francais>Mettre à jour les informations</francais>
+      <italiano>Aggiorna informazioni</italiano>
+      <spanish>Actualizar información</spanish>
+    </translation>
+    <translation id="are_you_sure_want_delete_text">
+      <polish>Czy na pewno chcesz usunąć?</polish>
+      <english>Are you sure you want to delete?</english>
+      <deutsch>Sind Sie sicher, dass Sie löschen möchten?</deutsch>
+      <francais>Êtes-vous sûr de vouloir supprimer cela ?</francais>
+      <italiano>Sei sicuro di volerlo eliminare?</italiano>
+      <spanish>Estás seguro de que quieres eliminar?</spanish>
+    </translation>
+    <translation id="if_you_remove_text">
+      <polish>Jeśli usuniesz wszystkie karty z Ali Product Finder, nie będziemy mogli pobrać płatności za kolejny okres rozliczeniowy, co spowoduje natychmiastowe zakończenie subskrypcji i brak dostępu do funkcjonalności wtyczki po zakończeniu bieżącego okresu rozliczeniowego.</polish>
+      <english>If you remove all cards from Ali Product Finder, we will not be able to collect payment for the next billing period, which will result in immediate termination of the subscription and no access to plug-in functionality after the end of the current billing period.</english>
+      <deutsch>Wenn Sie alle Karten aus dem Ali Product Finder entfernen, können wir die Zahlung für den nächsten Abrechnungszeitraum nicht einziehen, was zur sofortigen Kündigung des Abonnements und zu keinem Zugriff auf die Plug-in-Funktionalität nach dem Ende des aktuellen Abrechnungszeitraums führt.</deutsch>
+      <francais>Si vous supprimez toutes les cartes d'Ali Product Finder, nous ne serons pas en mesure de percevoir le paiement pour la prochaine période de facturation, ce qui entraînera la résiliation immédiate de l'abonnement et aucun accès à la fonctionnalité du plug-in après la fin de la période de facturation en cours.</francais>
+      <italiano>Se rimuovi tutte le carte da Ali Product Finder, non saremo in grado di riscuotere il pagamento per il periodo di fatturazione successivo, il che comporterà la risoluzione immediata dell'abbonamento e l'impossibilità di accedere alla funzionalità del plug-in dopo la fine del periodo di fatturazione corrente.</italiano>
+      <spanish>Si elimina todas las tarjetas de Ali Product Finder, no podremos cobrar el pago del próximo período de facturación, lo que resultará en la terminación inmediata de la suscripción y no tendrá acceso a la funcionalidad del complemento después del final del período de facturación actual.</spanish>
+    </translation>
+    <translation id="if_you_want_avoid_text">
+      <polish>Jeśli chcesz tego uniknąć, zachowaj co najmniej 1 aktywną kartę w Ali Product Finder.</polish>
+      <english>If you want to avoid this, keep at least 1 active card in Ali Product Finder.</english>
+      <deutsch>Wenn Sie dies vermeiden möchten, behalten Sie mindestens 1 aktive Karte im Ali Product Finder.</deutsch>
+      <francais>Si vous voulez éviter cela, gardez au moins 1 carte active dans Ali Product Finder.</francais>
+      <italiano>Se vuoi evitarlo, mantieni almeno 1 carta attiva in Ali Product Finder.</italiano>
+      <spanish>Si quiere evitar esto, mantenga al menos 1 tarjeta activa en Ali Product Finder.</spanish>
+    </translation>
+    <translation id="delete_card">
+      <polish>USUŃ KARTĘ</polish>
+      <english>DELETE CARD</english>
+      <deutsch>KARTE LÖSCHEN</deutsch>
+      <francais>SUPPRIMER LA CARTE</francais>
+      <italiano>CANCELLA CARTA</italiano>
+      <spanish>ELIMINAR TARJETA</spanish>
+    </translation>
+    <translation id="name_lastname_text">
+      <polish>Imię i nazwisko</polish>
+      <english>Name and lastname</english>
+      <deutsch>Name</deutsch>
+      <francais>Nom</francais>
+      <italiano>Nome</italiano>
+      <spanish>Nombre</spanish>
+    </translation>
+    <translation id="address_line_one_text">
+      <polish>Wiersz adresu 1</polish>
+      <english>Address Line 1</english>
+      <deutsch>Anschrift Zeile 1</deutsch>
+      <francais>Adresse 1</francais>
+      <italiano>Indirizzo Linea 1</italiano>
+      <spanish>Dirección Línea 1</spanish>
+    </translation>
+    <translation id="address_line_two_text">
+      <polish>Wiersz adresu 2</polish>
+      <english>Address Line 2</english>
+      <deutsch>Anschrift Zeile 2</deutsch>
+      <francais>Adresse 2</francais>
+      <italiano>Indirizzo Linea 2</italiano>
+      <spanish>Dirección Línea 2</spanish>
+    </translation>
+    <translation id="postcode_text">
+      <polish>Kod pocztowy</polish>
+      <english>Postcode</english>
+      <deutsch>Postleitzahl</deutsch>
+      <francais>Code postal</francais>
+      <italiano>Codice postale</italiano>
+      <spanish>Código postal</spanish>
+    </translation>
+    <translation id="city_text">
+      <polish>Miasto</polish>
+      <english>City</english>
+      <deutsch>Stadt</deutsch>
+      <francais>Ville</francais>
+      <italiano>Città</italiano>
+      <spanish>Ciudad</spanish>
+    </translation>
+        <translation id="country_text">
+      <polish>Kraj</polish>
+      <english>Country</english>
+      <deutsch>Land</deutsch>
+      <francais>Pays</francais>
+      <italiano>Paese</italiano>
+      <spanish>País</spanish>
+    </translation>
+        <translation id="per_month_text">
+      <polish>miesięcznie</polish>
+      <english>per month</english>
+      <deutsch>pro Monat</deutsch>
+      <francais>par mois</francais>
+      <italiano>al mese</italiano>
+      <spanish>por mes</spanish>
+    </translation>
+            <translation id="per_month_text2">
+      <polish>miesięcznie</polish>
+      <english>per month</english>
+      <deutsch>pro Monat</deutsch>
+      <francais>par mois</francais>
+      <italiano>al mese</italiano>
+      <spanish>por mes</spanish>
+    </translation>
+        <translation id="">
+      <polish>rocznie</polish>
+      <english>per year</english>
+      <deutsch>pro Jahr</deutsch>
+      <francais>par an</francais>
+      <italiano>per anno</italiano>
+      <spanish>por año</spanish>
+    </translation>
+        <translation id="order_details_text">
+      <polish>Szczegóły zamówienia:</polish>
+      <english>Order details:</english>
+      <deutsch>Bestelldetails:</deutsch>
+      <francais>Détails de la commande:</francais>
+      <italiano>Dettagli dell'ordine:</italiano>
+      <spanish>Detalles del pedido:</spanish>
+    </translation>
+          <translation id="order_details_text2">
+      <polish>Szczegóły zamówienia:</polish>
+      <english>Order details:</english>
+      <deutsch>Bestelldetails:</deutsch>
+      <francais>Détails de la commande:</francais>
+      <italiano>Dettagli dell'ordine:</italiano>
+      <spanish>Detalles del pedido:</spanish>
+    </translation>
+          <translation id="order_details_text3">
+      <polish>Szczegóły zamówienia:</polish>
+      <english>Order details:</english>
+      <deutsch>Bestelldetails:</deutsch>
+      <francais>Détails de la commande:</francais>
+      <italiano>Dettagli dell'ordine:</italiano>
+      <spanish>Detalles del pedido:</spanish>
+    </translation>
+        <translation id="you_saved_text">
+      <polish>Zaoszczędzasz:</polish>
+      <english>You saved:</english>
+      <deutsch>Du hast gespeichert:</deutsch>
+      <francais>Tu as sauvegardé:</francais>
+      <italiano>Hai salvato:</italiano>
+      <spanish>Salvaste:</spanish>
+    </translation>
+          <translation id="you_saved_text2">
+      <polish>Zaoszczędzasz:</polish>
+      <english>You saved:</english>
+      <deutsch>Du hast gespeichert:</deutsch>
+      <francais>Tu as sauvegardé:</francais>
+      <italiano>Hai salvato:</italiano>
+      <spanish>Salvaste:</spanish>
+    </translation>
+              <translation id="you_saved_text3">
+      <polish>Zaoszczędzasz:</polish>
+      <english>You saved:</english>
+      <deutsch>Du hast gespeichert:</deutsch>
+      <francais>Tu as sauvegardé:</francais>
+      <italiano>Hai salvato:</italiano>
+      <spanish>Salvaste:</spanish>
+    </translation>
+        <translation id="plan_subscription_text">
+      <polish>Plan Subskrypcji:</polish>
+      <english>Subscription Plan:</english>
+      <deutsch>Abonnementplan:</deutsch>
+      <francais>Formule d'abonnement:</francais>
+      <italiano>Piano di abbonamento:</italiano>
+      <spanish>Plan de suscripción:</spanish>
+    </translation>
+        <translation id="plan_subscription_text2">
+      <polish>Plan Subskrypcji:</polish>
+      <english>Subscription Plan:</english>
+      <deutsch>Abonnementplan:</deutsch>
+      <francais>Formule d'abonnement:</francais>
+      <italiano>Piano di abbonamento:</italiano>
+      <spanish>Plan de suscripción:</spanish>
+    </translation>
+          <translation id="plan_lifetime_text">
+      <polish>Plan Dożywotni:</polish>
+      <english>Lifetime Plan:</english>
+      <deutsch>Lebenslanger Plan:</deutsch>
+      <francais>Régime à vie:</francais>
+      <italiano>Piano a vita:</italiano>
+      <spanish>Plan de por vida:</spanish>
+    </translation>
+        <translation id="special_discounts_text">
+      <polish>Specjalne Zniżki:</polish>
+      <english>Special Discounts:</english>
+      <deutsch>Sonderrabatte:</deutsch>
+      <francais>Remises spéciales :</francais>
+      <italiano>Sconti speciali:</italiano>
+      <spanish>Descuentos especiales:</spanish>
+    </translation>
+          <translation id="special_discounts_text2">
+      <polish>Specjalne Zniżki:</polish>
+      <english>Special Discounts:</english>
+      <deutsch>Sonderrabatte:</deutsch>
+      <francais>Remises spéciales :</francais>
+      <italiano>Sconti speciali:</italiano>
+      <spanish>Descuentos especiales:</spanish>
+    </translation>
+            <translation id="special_discounts_text3">
+      <polish>Specjalne Zniżki:</polish>
+      <english>Special Discounts:</english>
+      <deutsch>Sonderrabatte:</deutsch>
+      <francais>Remises spéciales :</francais>
+      <italiano>Sconti speciali:</italiano>
+      <spanish>Descuentos especiales:</spanish>
+    </translation>
+            <translation id="total_text">
+      <polish>Razem:</polish>
+      <english>Total:</english>
+      <deutsch>Gesamt:</deutsch>
+      <francais>Ensemble:</francais>
+      <italiano>Insieme:</italiano>
+      <spanish>Juntos:</spanish>
+    </translation>
+                <translation id="total_text2">
+      <polish>Razem:</polish>
+      <english>Total:</english>
+      <deutsch>Gesamt:</deutsch>
+      <francais>Ensemble:</francais>
+      <italiano>Insieme:</italiano>
+      <spanish>Juntos:</spanish>
+    </translation>
+                  <translation id="total_text3">
+      <polish>Razem:</polish>
+      <english>Total:</english>
+      <deutsch>Gesamt:</deutsch>
+      <francais>Ensemble:</francais>
+      <italiano>Insieme:</italiano>
+      <spanish>Juntos:</spanish>
+    </translation>
+            <translation id="add_card_btn">
+      <polish>DODAJ KARTĘ</polish>
+      <english>ADD CARD</english>
+      <deutsch>KARTE HINZUFÜGEN</deutsch>
+      <francais>AJOUTER UNE CARTE</francais>
+      <italiano>AGGIUNGI CARTA</italiano>
+      <spanish>AGREGAR TARJETA</spanish>
+    </translation>
+            <translation id="add_card_popout_title">
+      <polish>Dodaj kartę</polish>
+      <english>Add card</english>
+      <deutsch>Füge eine Karte hinzu</deutsch>
+      <francais>Ajouter une carte</francais>
+      <italiano>Aggiungi una carta</italiano>
+      <spanish>Añade una tarjeta</spanish>
+    </translation>
+            <translation id="add_card_popout_desc">
+      <polish>Wprowadź dane karty i potwierdź.</polish>
+      <english>Enter card details and confirm.</english>
+      <deutsch>Kartendaten eingeben und bestätigen.</deutsch>
+      <francais>Entrez les détails de la carte et confirmez.</francais>
+      <italiano>Inserisci i dati della carta e conferma.</italiano>
+      <spanish>Introduce los datos de la tarjeta y confirma.</spanish>
+    </translation>
+            <translation id="add_cardd">
+      <polish>DODAJ KARTĘ</polish>
+      <english>ADD CARD</english>
+      <deutsch>KARTE HINZUFÜGEN</deutsch>
+      <francais>AJOUTER UNE CARTE</francais>
+      <italiano>AGGIUNGI CARTA</italiano>
+      <spanish>AGREGAR TARJETA</spanish>
+    </translation>
+            <translation id="update_plan_button">
+      <polish>Zaktualizuj plan</polish>
+      <english>Update plan</english>
+      <deutsch>Plan aktualisieren</deutsch>
+      <francais>Plan de mise à jour</francais>
+      <italiano>Aggiorna il piano</italiano>
+      <spanish>Actualizar plan</spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+            <translation id="">
+      <polish></polish>
+      <english></english>
+      <deutsch></deutsch>
+      <francais></francais>
+      <italiano></italiano>
+      <spanish></spanish>
+    </translation>
+
+
+
+
+
+
+
+
+  </translations>
