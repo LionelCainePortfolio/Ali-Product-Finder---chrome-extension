@@ -1,8 +1,6 @@
 <h1>Ali Product Finder - Chrome Extension</h1>
 
-
-https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/b3b83c71-c193-4ba4-bfaa-ac63e83a72cc
-
+  <video src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/20221214_033549.mp4?raw=true" type="video/mp4" />
 
 <hr>
 <h2>Streamline Your Dropshipping Experience</h2>
@@ -23,17 +21,21 @@ After registration, a free 15-minute trial period is triggered, with time counte
 </ul>
 <h2>Screenshots</h2>
 <div style="display: inline-block;">
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/3bf024ef-6c87-4c5e-aa5f-46236fc6f0aa"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/7c92b923-8e6f-4b7c-ad73-7b6716f206f9"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/07886fa6-34e7-45a1-9272-4abacb1cf016"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/60d90599-57de-4193-a433-ead96b54aba1"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/7f31d903-6715-483b-924b-88cf25349bd8"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/9d488461-1cd7-4279-be82-7722a7709f3a"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/cb2c4f8c-a1d0-4a84-9cd0-a3d51a628d22"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/d688f4d1-3636-47d7-b4e2-8c3ad99d6e8f"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/4bc3ad7b-7bde-41fa-95af-41192da0333e"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/2c838df9-7a3b-4acc-b283-95ae27bc3ada"/>
-  <img width="15%" src="https://github.com/LionelCainePortfolio/aliproductfinder/assets/152194302/0620e8f3-7344-4371-a04b-9b35f25e5a63"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/1.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/2.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/3.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/4.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/5.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/6.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/7.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/8.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/9.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/10.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/11.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/12.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/13.png?raw=true"/>
+  <img width="15%" src="https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/14.png?raw=true"/>
+
 </div>
 
 
