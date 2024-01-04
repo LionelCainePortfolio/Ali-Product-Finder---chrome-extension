@@ -1,6 +1,9 @@
 <h1>Ali Product Finder - Chrome Extension</h1>
 
-https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/blob/main/screenshots/20221214_033549.mp4
+
+
+https://github.com/LionelCainePortfolio/Ali-Product-Finder---chrome-extension/assets/152194302/50c79b07-c357-4cc0-b965-7aa3d3bab348
+
 
 <hr>
 <h2>Streamline Your Dropshipping Experience</h2>
